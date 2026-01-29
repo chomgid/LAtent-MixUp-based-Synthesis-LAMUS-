@@ -64,7 +64,7 @@ def main(args):
         
     # Save data
     if args.pca_mixup:
-        output_directory = f'TSexperiments/dstspca/{args.dataset}/pca_mixup/{args.centering}'
+        output_directory = f'TSexperiments/dstspca/{args.dataset}/{args.centering}'
     else:
         output_directory = f'TSexperiments/dstspca/{args.dataset}/pca_nn/{args.centering}'
         
@@ -82,9 +82,9 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset', default='energy')
-    parser.add_argument('--sort', action='store_true')
-    parser.add_argument('--pca_mixup', action='store_true')
+    parser.add_argument('--dataset', default='electricity')
+    parser.add_argument('--sort', action='store_true', default=True)
+    parser.add_argument('--pca_mixup', action='store_true', default=True)
     parser.add_argument('--centering', type=str, required=True)
     parser.add_argument('--indep', action='store_true')
     parser.add_argument('--aug', default=1)

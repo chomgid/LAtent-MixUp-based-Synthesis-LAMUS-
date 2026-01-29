@@ -2,41 +2,53 @@
 
 This repository contains the official Python package implementation of the paper **LAtent Mixup-based Synthesis (Tentative)**.
 
-## Usage
+## Getting Started with LAMUS
+### Running LAMUS
 
-Below is a simple example to help you get started with the `DSTS` package.
+1. **Set Input Data**  
+   Place your time-series dataset under the `TSdata/{dataset}` directory.  
+   The dataset should be stored as a pickle file named `{dataset}.pkl` and formatted as either:
+   - `(num_samples, sequence_length, num_channels)`, or
+   - `(num_samples, sequence_length)` (automatically expanded to 3D).
 
-### Import the package
+2. **Run LAMUS**  
+   Execute the main script `main.py`, which loads the dataset, fits the LAMUS model, and generates synthetic time-series data:
+   ```bash
+   python main.py --dataset electricity --centering 
+   ```
 
-```python
-from DSTS.dsts import dsts
-```
+3. **Output**  
+    The generated synthetic data is saved as a pickle file under `TSexperiments/dstspca/{dataset}/` directory.
 
-### Load your dataset
+## LAMUS Parameters
 
-```python
-data = ...  # Your dataset here
-```
+LAMUS is implemented through the `dsts` class, which performs PCA-based decomposition, latent mixup–based synthesis, and calibration for time series data.
 
-### Construct a DSTS model
+### Centering Strategy
 
-```python
-mixup_model = dsts(sort=True, centering='double')
-```
+LAMUS supports multiple centering strategies to control how mean structures are handled before synthesis (`--centering`):
 
-### Fit the model to your data
+- **sample_wise**  
+  Each time series is centered by subtracting its own temporal mean.  
 
-```python
-mixup_model.fit(train_data)
-```
+- **feature_wise**  
+  Centering is performed across samples at each time step.  
 
-### Generate synthetic data
+- **double**  
+  Applies both sample-wise and feature-wise centering sequentially.
 
-```python
-generated_data = mixup_model.generate(aug=1)
-```
 
----
+### Synthesis Variants
+
+LAMUS supports two synthesis modes controlled by the `--pca_mixup` flag.
+
+- **PCA-Mixup (default)**  
+  Performs mixup directly in the PCA latent space.
+
+- **PCA-NN**  
+  PCA representations are used only to identify neighboring samples.
+
+
 
 ## License
 
