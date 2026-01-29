@@ -1,4 +1,4 @@
-# LAtent Mixup-based Synthesis (LAMUS) package
+# LAtent Mixup-based Synthesis (LAMUS)
 
 This repository contains the official Python package implementation of the paper **LAtent Mixup-based Synthesis (Tentative)**.
 
