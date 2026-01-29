@@ -2,14 +2,6 @@
 
 This repository contains the official Python package implementation of the paper **LAtent Mixup-based Synthesis (Tentative)**.
 
-## Installation
-
-You can install the package via `pip`. Run the following command in your terminal:
-
-```bash
-pip install DSTS
-```
-
 ## Usage
 
 Below is a simple example to help you get started with the `DSTS` package.
@@ -17,7 +9,7 @@ Below is a simple example to help you get started with the `DSTS` package.
 ### Import the package
 
 ```python
-from DSTS import dsts
+from DSTS.dsts import dsts
 ```
 
 ### Load your dataset
