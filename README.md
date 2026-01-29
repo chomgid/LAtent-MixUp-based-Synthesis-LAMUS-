@@ -1,4 +1,4 @@
-# Doubly Structured Time-series Synthesis (DSTS)
+# LAtent Mixup-based Synthesis (LAMUS) package
 
 This repository contains the official Python package implementation of the paper **LAtent Mixup-based Synthesis (Tentative)**.
 
