@@ -1,0 +1,13 @@
+# macOS system files
+.DS_Store
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Metadata and packaging
+MANIFEST.in
+
+# Byte-compiled / optimized / DLL files
+**/__pycache__/
