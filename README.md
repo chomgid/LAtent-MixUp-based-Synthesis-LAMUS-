@@ -48,7 +48,14 @@ LAMUS supports two synthesis modes controlled by the `--pca_mixup` flag.
 - **PCA-NN**  
   PCA representations are used only to identify neighboring samples.
 
+## Acknowledgement
 
+This repository contains code adapted from the TSGBench project
+(https://github.com/YihaoAng/TSGBench), proposed by Ang et al. (VLDB '24).
+
+While TSGBench provides a general benchmarking framework for time series
+evaluation, the current implementation adapts the evaluation pipeline
+by adding and replacing evaluation methods to align with our proposed time series generation (and evaluation) framework. 
 
 ## License
 
