@@ -51,10 +51,9 @@ LAMUS supports two synthesis modes controlled by the `--pca_mixup` flag.
 ## Acknowledgement
 
 This repository contains code adapted from the TSGBench project
-(https://github.com/YihaoAng/TSGBench).
+(https://github.com/YihaoAng/TSGBench). 
 
-While TSGBench provides a general benchmarking framework for time series
-evaluation, the current implementation adapts the evaluation pipeline
+Our implementation adapts the evaluation pipeline of original TSGbench,
 by adding and replacing evaluation methods to align with our proposed time series generation (and evaluation) framework. 
 
 ## License
